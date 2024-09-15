@@ -1,32 +1,22 @@
-n=int(input(""))
-TheList=[]
+n = int(input())
+the_list = []
+
 for i in range(n):
-    inp=input("")
-    val=inp.split(" ")
-    if(val[0]=='insert'):
-        TheList.insert(val[1],val[2])
-        print(TheList)
-        
-    elif(val[0]=='print'):
-        print(TheList)
+    value= input().split()
+    
+    if(value[0]=="insert"):
+        the_list.insert(int(value[1]),int(value[2]))
+    elif(value[0]=="print"):
+        print(the_list)
+    elif(value[0]=="remove"):
+        the_list.remove(int(value[1]))
+    elif(value[0]=="append"):
+        the_list.append(int(value[1]))
+    elif(value[0]=="sort"):
+        the_list.sort()
+    elif(value[0]=="pop"):
+        the_list.pop()
+    elif(value[0]=="reverse"):
+        the_list.reverse()
 
-    elif(val[0]=='remove'):
-        for j in range(len(TheList)):
-            TheList.remove(val[1])
-        print(TheList)
-    
-    elif(val[0]=='append'):
-        TheList.append(val[1])
-        print(TheList)
-
-    elif(val[0]=='sort'):
-        TheList.sort()
-        print(TheList)
-    
-    elif(val[0]=='pop'):
-        TheList.pop()
-        print(TheList)
-    
-    elif(val[0]=='reverse'):
-        TheList.reverse()
-        print(TheList)
+print(the_list)
